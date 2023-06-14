@@ -44,13 +44,19 @@
             <h1>Cadastro</h1>
             <p>Digite os seus dados para se CADASTRAR.</p>
             <label for="nome">Nome</label>
-            <input type="text" placeholder="Digite seu Nome" autofocus="true" name="nome" class="text" />
+            <input type="text" placeholder="Digite seu Nome" autofocus="true" name="nome" class="text" required />
             <label for="email">E-mail</label>
-            <input type="email" placeholder="Digite seu e-mail" autofocus="true" name="email" class="text" />
-            <label for="password">Senha</label>
-            <input type="password" placeholder="Digite sua senha" name="password" class="text" />
+            <input type="email" placeholder="Digite seu e-mail" autofocus="true" name="email" class="text" required/>
+            <label for="senha">Senha</label>
+            <input type="password" placeholder="Digite sua senha" name="senha" class="text" required />
+
+            <label for="data_nascimento">Data de Nascimento</label>
+            <input type="date"name="data_nascimento" class="text" required />
             
-            <input type="hidden" name="isBoolean" value="1">
+            <label for="telefone">Telefone</label>
+            <input type="text"name="telefone" class="text" required />
+            
+            <input type="hidden" name="isBoolean" value="1" >
 
             <input type="submit" value="Confirmar" class="btn" />
           </form>
