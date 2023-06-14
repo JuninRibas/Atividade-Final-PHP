@@ -22,6 +22,27 @@
     </p>
         
 </header>
+<nav>
+   
+   <div>
+     <a href="home.php">Home</a>
+     <a href="cadastro.html">Cadastrar Usuario</a>
+     <a href="Logout.php">Logout</a>
+   </div>
+
+   <div>
+     <?php
+       session_start();
+       if (!isset($_SESSION['login'])) {
+         header('location: login.html');
+       }
+       echo "<p> $_SESSION[login] </p>";
+       ?>
+   </div>
+ </nav>
+
 </body>
+
+
 
 </html>
