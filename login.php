@@ -1,14 +1,19 @@
 <?php 
-    $login = $_POST['email'];
+    include_once "db.php";
+
+    $email = $_POST['email'];
     $senha = $_POST['senha'];
 
-    if( $login == "junior@gmail.com" && $senha =="12345"){
+    if(verificaLoginSenha($email, $senha)){
         echo "Login efetuado com sucesso!";
         session_start();
-        $_SESSION['login'] = $login;
-        echo"<script>setTimeout(function(){  window.location.href='home.php'  },5000); </script>";
+        $_SESSION['email'] = $email;
+
+        echo"<script>setTimeout(function(){  window.location.href='home.php'  },3000); </script>";
 
     }else{
         echo "Login ou senha inválidos!";
+     
     }
+    
     ?> 

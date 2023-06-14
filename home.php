@@ -10,13 +10,7 @@
 
 </head>
 <body>
-    <?php 
-        session_start();
-        if(!isset($_SESSION['login'])){
-            header('Location: login.php');
-        }
-        echo "Bem vindo, ".$_SESSION['login'];
-    ?>
+   
     <nav>
     <ul>
         <li> <a href="home.php"> Home </a> </li>
@@ -25,6 +19,53 @@
         <li class="right"><a href="logout.php">Logout</a></li>
     </ul>
     </nav>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Data de Nascimento</th>
+            <th>Telefone</th>
+        </tr>
+        <?php
+    include_once "db.php";
 
+    session_start();
+    if(!isset($_SESSION['email'])){
+        header('Location: login.php');
+    }
+
+    echo "<p class='bemvindo'>Bem-vindo, ".$_SESSION['email']."</p>";
+    $result = recuperaAll();
+    
+    if (!empty($result)) {
+        echo "<table>";
+        echo "<tr>
+                  <th>Nome</th>
+                  <th>Email</th>
+                  <th>Data de Nascimento</th>
+                  <th>Telefone</th>
+                  <th>Ações</th>
+              </tr>";
+        
+        foreach ($result as $row) {
+            echo "<tr>";
+            echo "<td>".$row["nome"]."</td>";
+            echo "<td>".$row["email"]."</td>";
+            echo "<td>".$row["data_nascimento"]."</td>";
+            echo "<td>".$row["telefone"]."</td>";
+            
+            echo "<td>
+            <a class='linkF U' href='editarUsuario.php?id=" . $row['id'] . "'><button>Edit</button></a>
+            <a class='linkF D' href='deletarUsuario.php?id=" . $row['id'] . "'><button>Delete</button></a>
+             </td>";                  
+            echo "</tr>";
+        }
+        
+        echo "</table>";
+    } else {
+        echo "<p>Nenhum usuário encontrado.</p>";
+    }
+?>
+    </table>
 </body>
 </html>
