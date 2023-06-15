@@ -34,7 +34,7 @@
         header('Location: login.php');
     }
 
-    echo "<p class='bemvindo'>Bem-vindo, ".$_SESSION['email']."</p>";
+    echo "<p class='bemvindo'>Bem-vindo, <strong>".$_SESSION['email']."</strong></p>";
     $result = recuperaAll();
     
     if (!empty($result)) {

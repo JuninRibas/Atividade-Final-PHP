@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="style.css">
+   
 
     <style>
 
@@ -47,8 +47,8 @@
             <input type="text" placeholder="Digite seu Nome" autofocus="true" name="nome" class="text" required />
             <label for="email">E-mail</label>
             <input type="email" placeholder="Digite seu e-mail" autofocus="true" name="email" class="text" required/>
-            <label for="senha">Senha</label>
-            <input type="password" placeholder="Digite sua senha" name="senha" class="text" required />
+            <label for="password">Senha</label>
+            <input type="password" placeholder="Digite sua senha" name="password" class="text" required />
 
             <label for="data_nascimento">Data de Nascimento</label>
             <input type="date"name="data_nascimento" class="text" required />
@@ -66,14 +66,15 @@
 
             function limpaDados(){
 
-              let nome = querySelector('#nome')
-              let gmail = querySelector('#gmail')
-              let senha = querySelector('#senha')
+              let nome = document.querySelector('#nome');
+              let gmail = document.querySelector('#gmail');
+              let senha = document.querySelector('#senha');
 
 
-              nome.innerHTML = ''
-              gmail.innerHTML = ''
-              senha.innerHTML = ''
+
+              nome.value = '';
+              gmail.value = '';
+              senha.value = '';
 
             }
 

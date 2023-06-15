@@ -3,20 +3,24 @@
         $con=new PDO("mysql:host=localhost;dbname=db","root","aluno");
         return $con;
     }
-    function atualizaUser($id, $nome, $email){
+    function editarUsuario($id, $nome, $email,$senha, $novaData,$telefone){
         try {
         $con = conectaBD();
         $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "UPDATE user SET nome=?, login=? WHERE id=?";
+        $sql = "UPDATE usuario SET nome=?, email=?, senha=?, data_nascimento=?, telefone=? WHERE id=?";
         $stm = $con->prepare($sql);
         $stm->bindParam(1, $nome);
         $stm->bindParam(2, $email);
-        $stm->bindParam(3, $id);
+        $stm->bindParam(3, $senha);
+        $stm->bindParam(4, $novaData);
+        $stm->bindParam(5, $telefone);
+        $stm->bindParam(6, $id);
         $stm->execute();
     } catch (PDOException $e) {
         echo 'ERROR: ' . $e->getMessage();
     }
 }
+
     function insereUsuario($nome,$email,$senha,$data_nascimento,$telefone){
         try{
         $con=conectaBD();
@@ -52,7 +56,7 @@
         
 
 
-    function recuperaUsuario($id){
+        function recuperaUsuarioID($id){
         $con=conectaBD();
         $sql="SELECT * FROM usuario Where id=?";
         $stm=$con->prepare($sql);

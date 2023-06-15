@@ -11,7 +11,7 @@ $vemCad = $_POST['isBoolean'];
 
 if (conectaBD()) {
 
-  echo insereUsuario($nome, $email, $senha,$data_nascimento,$telefone);
+  echo insereUsuario($nome, $email, $senha, $data_nascimento, $telefone);
 
   if($vemCad != 1){
     header('Location: index.html');
