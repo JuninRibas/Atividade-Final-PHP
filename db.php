@@ -1,6 +1,6 @@
 <?php 
     function conectaBD(){
-        $con=new PDO("mysql:host=localhost;dbname=db","root","aluno");
+        $con=new PDO("mysql:host=localhost;dbname=db","root","JJeess3344.");
         return $con;
     }
     function editarUsuario($id, $nome, $email,$senha, $novaData,$telefone){
