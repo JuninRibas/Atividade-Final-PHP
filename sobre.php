@@ -15,7 +15,7 @@
 
 <header>
 
-    <h1>Como foi dificl fazer isso aqui, obrigado Deus por rodar essa bagaça</h1>
+    <h1>Como foi difícil fazer isso aqui, obrigado Deus por rodar essa bagaça</h1>
 
     <p>
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla delectus fugiat voluptatem, reiciendis saepe totam? Unde est voluptatum ex aut ducimus optio, neque tempora quo esse maxime, ipsam natus temporibus?
