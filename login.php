@@ -13,7 +13,7 @@
 
     }else{
         echo "Login ou senha inválidos!";
-     
+        header('Location: login.php'); 
     }
     
     ?> 
