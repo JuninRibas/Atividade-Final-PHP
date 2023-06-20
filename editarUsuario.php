@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="editarUsuario.css">
     <title>EditarUsuario</title>
 </head>
 
@@ -36,8 +36,8 @@
     <div class="page">
         <form action="atualizarUsuario.php" class="formCad" method="POST">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
-            <h1>Cadastro</h1>
-            <p>Digite os seus dados para se CADASTRAR.</p>
+            <h1>Editar</h1>
+            <h3>Atualize os dados</h3>
             <label for="nome">Nome</label>
             <input type="text" placeholder="Digite seu Nome" autofocus="true" name="nome" class="text"
                 value="<?php echo $nome; ?>" required>

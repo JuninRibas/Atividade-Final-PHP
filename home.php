@@ -19,6 +19,14 @@
         <li class="right"><a href="logout.php">Logout</a></li>
     </ul>
     </nav>
+
+    <div class="search-bar">
+    <form action="" method="GET">
+      <input type="text" name="search" placeholder="Pesquisar..." autofocus>
+      <input type="submit" value="Buscar">
+    </form>
+  </div>
+
     <table>
         <tr>
             <th>Nome</th>
