@@ -10,7 +10,7 @@
   <title>Document</title>
 
   <style>
-    /* Estilos da barra de pesquisa */
+
     .search-bar {
       margin-bottom: 20px;
       display: flex;
@@ -37,7 +37,7 @@
       margin-left: 10px;
     }
 
-    /* Estilos adicionais */
+   
     table {
       width: 100%;
       border-collapse: collapse;
